@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Student</title>
+
+<!-- 🔥 Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  height: 100vh;
+  margin: 0;
+
+  /* 🔥 YOUR IMAGE BACKGROUND */
+  background: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('Image/add-bg.png'); /* 🔥 YOUR IMAGE PATH */
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
+
+/* 🔥 Glass Form Card */
+.form-card {
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.08);
+  padding: 35px;
+  border-radius: 15px;
+  width: 420px;
+  color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+/* Heading */
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* Inputs */
+.form-control, .form-select {
+  margin-bottom: 15px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+/* Dropdown text fix */
+.form-select option {
+  color: black;
+}
+
+/* Button */
+.btn-custom {
+  width: 100%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+}
+
+.btn-custom:hover {
+  opacity: 0.9;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="form-card">
+
+  <h2>Add Student</h2>
+
+  <form action="addStudent" method="post">
+
+    <input type="text" name="name" class="form-control" placeholder="Name" required>
+
+    <input type="number" name="roll" class="form-control" placeholder="Roll Number" required>
+
+    <input type="email" name="email" class="form-control" placeholder="Email" required>
+
+    <input type="text" name="course" class="form-control" placeholder="Course" required>
+
+    <input type="number" step="0.01" name="percentage" class="form-control" placeholder="Percentage" required>
+
+    <!-- 🔥 Track Dropdown -->
+    <select name="track" class="form-select" required>
+      <option value="">Select Career Path</option>
+      <option value="Placement">Placement</option>
+      <option value="GATE">GATE Preparation</option>
+    </select>
+
+    <button type="submit" class="btn btn-custom">Add Student</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
